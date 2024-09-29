@@ -1,0 +1,21 @@
+---
+# configure_zincati/tasks/main.yaml
+
+- name: 'Create directory /etc/zincati/config.d/'
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: 'directory'
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+  loop:
+    - '/etc/zincati/'
+    - '/etc/zincati/config.d/'
+
+- name: 'Create 90-configure-auto-updates.toml'
+  ansible.builtin.template:
+    src: '90-configure-auto-updates.toml.j2'
+    dest: '/etc/zincati/config.d/90-configure-auto-updates.toml'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
