@@ -1,0 +1,15 @@
+---
+# configure_zincati/defaults/main.yml
+
+configure_zincati_update_strategy: 'periodic'
+
+configure_zincati_periodic_days:
+  - 'Mon'
+  - 'Tue'
+  - 'Wed'
+  - 'Thu'
+  - 'Fri'
+  - 'Sat'
+  - 'Sun'
+configure_zincati_periodic_start_time: '01:30'
+configure_zincati_periodic_length_minutes: 120
