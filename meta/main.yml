@@ -1,0 +1,18 @@
+galaxy_info:
+  role_name: 'configure_zincati'
+  namespace: 'johanneskastl'
+  author: 'Johannes Kastl'
+  description: 'Configure the zincati service on Fedora/RedHat CoreOS'
+
+  license: 'BSD-3-Clause'
+
+  min_ansible_version: '2.15'
+
+  platforms:
+    - name: Fedora
+      versions:
+        - all
+
+  galaxy_tags: []
+
+dependencies: []
