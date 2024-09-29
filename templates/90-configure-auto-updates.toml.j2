@@ -3,9 +3,11 @@
 #
 
 [updates]
-strategy = "periodic"
+strategy = "{{ configure_zincati_update_strategy }}"
 
+{% if configure_zincati_update_strategy == "periodic" %}
 [[updates.periodic.window]]
-days = [ "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri" ]
-start_time = "01:30"
-length_minutes = 120
+days = {{ configure_zincati_periodic_days }}
+start_time = "{{ configure_zincati_periodic_start_time }}"
+length_minutes = {{ configure_zincati_periodic_length_minutes }}
+{% endif %}
