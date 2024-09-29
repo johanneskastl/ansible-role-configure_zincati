@@ -1,0 +1,11 @@
+#
+# {{ ansible_managed }}
+#
+
+[updates]
+strategy = "periodic"
+
+[[updates.periodic.window]]
+days = [ "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri" ]
+start_time = "01:30"
+length_minutes = 120
